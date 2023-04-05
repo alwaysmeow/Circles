@@ -1,0 +1,24 @@
+footer
+{
+  height: calc(12px * 5 + min(1vw, 1vw) * 2);
+  width: 100%;
+  background: var(--ItemColor);
+  color: var(--BGColor);
+  display: flex;
+  transition: 0s;
+  z-index: 2;
+}
+
+footer ul
+{
+  width: 0px;
+  font-size: 12px;
+  width: auto;
+  display: block;
+  margin: calc(min(1vw, 1vw));
+}
+
+footer div
+{
+  user-select: text;
+}

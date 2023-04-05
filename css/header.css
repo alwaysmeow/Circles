@@ -1,0 +1,79 @@
+header
+{
+  width: 100%;
+  height: 100vh;
+  background: var(--BGColor);
+  color: var(--ItemColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Header
+{
+  position: fixed;
+  z-index: 1;
+  transition: 0s;
+}
+
+.text
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+  font-size: 10vh;
+}
+
+#ThemesList
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--radius) * 2);
+}
+
+.Theme
+{
+  height: 0;
+  width: 0;
+  padding: var(--radius);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Back
+{
+  padding: var(--radius);
+  border-radius: 50%;
+  background: var(--HoverColor);
+}
+
+.Face
+{
+  position: absolute;
+  padding: var(--radius);
+  border-radius: 50%;
+  background: var(--MainColor);
+}
+
+.Theme.active .Face
+{
+  padding: calc(var(--radius) * 0.75);
+}
+
+[class = "Theme"]:hover
+{
+  cursor: pointer;
+}
+
+[class = "Theme"]:hover .Face
+{
+  padding: 0;
+  background: var(--HoverColor);
+  transition-property: background;
+  transition: 0s;
+}

@@ -1,0 +1,83 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  user-select: none;
+  transition: 0.5s;
+}
+
+body
+{
+  background: var(--BGColor);
+  color: var(--ItemColor);
+  display: flex;
+  flex-direction: column;
+}
+
+main
+{
+  height: 100vh;
+  background: var(--SpareColor);
+  color: var(--ItemColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+main *
+{
+  position: absolute;
+}
+
+#Border
+{
+  height: calc(100vh - 2 * var(--radius));
+  width: calc(100vw - 2 * var(--radius) - 10px);
+  border: calc(var(--radius) / 2) solid var(--ItemColor);
+  border-radius: var(--radius);
+}
+
+#Board
+{
+  height: calc(100vh - 4 * var(--radius));
+  width: calc(100vw - 4 * var(--radius) - 10px);
+}
+
+#ClickBoard
+{
+  height: calc(100vh - 4 * var(--radius));
+  width: calc(100vw - 4 * var(--radius) - 10px);
+  z-index: 3;
+}
+
+#Score
+{
+  font-weight: 900;
+  font-size: calc((15vh + 15vw) / 2);
+  color: var(--BGColor);
+  text-align: center;
+}
+
+#Score.GameOver
+{
+  font-size: calc((15vh + 15vw) / 4);
+}
+
+.Circle
+{
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  padding: var(--radius);
+  background: var(--ItemColor);
+  transition: 0s, background 0.4s, padding 0.2s ease-in, margin 0.2s ease-in;
+  z-index: 4;
+}
+
+.Circle:hover
+{
+  cursor: pointer;
+}
